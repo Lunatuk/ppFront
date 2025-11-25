@@ -3,6 +3,7 @@ import { Box, Flex, Text, Button } from '@chakra-ui/react'
 import { useAuth } from '@/context/AuthContext'
 import { Link as RouterLink } from 'react-router-dom'
 import { PATHS } from '@/routes/paths'
+import AIChatButton from './AIChatButton'
 
 export default function Navbar() {
   const { user, logout } = useAuth()
@@ -17,6 +18,7 @@ export default function Navbar() {
         </Text>
 
         <Flex align="center" gap={4}>
+          <AIChatButton />
           <Text fontSize="sm"><strong>{username}</strong></Text>
           <Button
             size="sm"
